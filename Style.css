@@ -1,0 +1,176 @@
+/* Estilo Geral */
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #5e17eb;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Produtos */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  flex: 1;
+}
+
+.products-container .card {
+  border: 2px solid #5e17eb;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f5f5f5;
+  transition: transform 0.2s ease-in-out;
+}
+
+.products-container .card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #c0392b;
+}
+
+/* Formulário */
+aside {
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 0 1 300px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  max-width: 320px;
+  position: relative;
+  left: -20px; /* Ajustando o formulário um pouco para a esquerda */
+  width: 100%; /* Garantindo que o aside preencha a largura disponível */
+  min-width: 320px; /* Tamanho mínimo para garantir que o formulário não fique muito pequeno */
+}
+
+aside h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #5e17eb;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Garantir que o formulário ocupe toda a largura disponível */
+}
+
+form input, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 2px solid #5e17eb;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+form button:hover {
+  background-color: #2980b9;
+}
+
+form input:focus, form button:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Rodapé */
+footer {
+  background-color: #5e17eb;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsividade com Media Queries */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .products-container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  aside {
+    border-left: none;
+    border-top: 2px solid #ccc;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: none;
+    left: 0;
+  }
+
+  aside form {
+    margin: 0;
+  }
+
+  form input, form button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  form input, form button {
+    font-size: 12px;
+  }
+}
