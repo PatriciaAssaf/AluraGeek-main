@@ -1,16 +1,16 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Produto Exemplo",
-      "price": 29.99,
-      "image": "https://via.placeholder.com/150"
+    "id": 1,
+    "name": "Caneca Mapa Terra Média",
+    "price": 49.99,
+    "image": "https://m.media-amazon.com/images/I/61fv7pU+lmL._AC_UL320_.jpg"
     },
     {
-      "id": 2,
-      "name": "Produto Exemplo 2",
-      "price": 49.99,
-      "image": "https://via.placeholder.com/150"
+    "id": 2,
+    "name": "Funko Pop! Frodo Baggins",
+    "price": 329.99,
+    "image": "https://cdn.awsli.com.br/800x800/84/84034/produto/224854005/c-1--800-lhygo5f57j.jpg"
     }
   ]
 }

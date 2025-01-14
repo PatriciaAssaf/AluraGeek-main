@@ -12,16 +12,16 @@ function renderProducts() {
     productCard.classList.add('product-card');
     
     productCard.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
+      <img src="${product.image}" alt="${product.name}" class="product-image">
       <h3>${product.name}</h3>
       <p>Preço: R$ ${product.price.toFixed(2)}</p>
       <div class="product-buttons">
-        <button class="edit-btn" data-id="${product.id}">Alterar</button>
+        <button class="edit-btn" data-id="${product.id}">Editar</button>
         <button class="delete-btn" data-id="${product.id}">Excluir</button>
       </div>
     `;
     
-    productList.appendChild(productCard);
+    document.getElementById("product-list").appendChild(productCard);
   });
 }
 
@@ -103,15 +103,15 @@ productList.addEventListener('click', (e) => {
 products = [
   {
     id: 1,
-    name: "Produto 1",
-    price: 19.99,
-    image: "https://via.placeholder.com/200",
+    name: "Caneca Mapa Terra Média",
+    price: 49.99,
+    image: "https://m.media-amazon.com/images/I/61fv7pU+lmL._AC_UL320_.jpg",
   },
   {
     id: 2,
-    name: "Produto 2",
-    price: 29.99,
-    image: "https://via.placeholder.com/200",
+    name: "Funko Pop! Frodo Baggins",
+    price: 329.99,
+    image: "https://cdn.awsli.com.br/800x800/84/84034/produto/224854005/c-1--800-lhygo5f57j.jpg",
   },
 ];
 
