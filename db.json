@@ -1,18 +1,16 @@
-
-
 {
   "products": [
     {
       "id": 1,
-      "name": "Produto 1",
-      "price": 19.99,
-      "image": "https://example.com/produto1.jpg"
+      "name": "Produto Exemplo",
+      "price": 29.99,
+      "image": "https://via.placeholder.com/150"
     },
     {
       "id": 2,
-      "name": "Produto 2",
-      "price": 29.99,
-      "image": "https://example.com/produto2.jpg"
+      "name": "Produto Exemplo 2",
+      "price": 49.99,
+      "image": "https://via.placeholder.com/150"
     }
   ]
 }

@@ -1,176 +1,165 @@
-/* Estilo Geral */
-body {
-  font-family: 'Press Start 2P', sans-serif;
-  background-color: #fff;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
   color: #333;
 }
 
+/* Cabeçalho */
 header {
-  background-color: #5e17eb;
-  color: white;
+  background-color: #006f70; /* Azul Turquesa Mais Escuro */
+  color: #fff;
   text-align: center;
-  padding: 20px 0;
-  margin-bottom: 20px;
+  padding: 1rem;
 }
 
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Layout principal */
 main {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px;
+  padding: 2rem;
 }
 
-/* Produtos */
+/* Seção de produtos */
+section {
+  width: 70%;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #006f70; /* Azul Turquesa Mais Escuro */
+  margin-bottom: 1rem;
+}
+
 .products-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 20px;
-  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.products-container .card {
-  border: 2px solid #5e17eb;
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 10px;
-  text-align: center;
-  background-color: #f5f5f5;
-  transition: transform 0.2s ease-in-out;
+  width: 200px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.products-container .card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
-  max-width: 100%;
+.product-card img {
+  width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
-.card button {
-  margin-top: 10px;
-  padding: 5px 10px;
-  background-color: #e74c3c;
-  color: white;
+.product-card h3 {
+  font-size: 1.2rem;
+  color: #006f70; /* Azul Turquesa Mais Escuro */
+}
+
+.product-card p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-card button {
+  background-color: #006f70; /* Tangerina */
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
   cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
-.card button:hover {
-  background-color: #c0392b;
+.product-card button:hover {
+  background-color: #004c4d; /* Tons mais escuros de Tangerina */
+}
+
+.product-card .delete-btn {
+  background-color: #ff3333; /* Vermelho para excluir */
+}
+
+.product-card .delete-btn:hover {
+  background-color: #e60000;
 }
 
 /* Formulário */
 aside {
-  background-color: #fafafa;
+  width: 25%;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 20px;
-  flex: 0 1 300px;
-  margin-left: 20px;
-  margin-right: 20px;
-  box-sizing: border-box;
-  max-width: 320px;
-  position: relative;
-  left: -20px; /* Ajustando o formulário um pouco para a esquerda */
-  width: 100%; /* Garantindo que o aside preencha a largura disponível */
-  min-width: 320px; /* Tamanho mínimo para garantir que o formulário não fique muito pequeno */
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-aside h2 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #5e17eb;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%; /* Garantir que o formulário ocupe toda a largura disponível */
-}
-
-form input, form button {
-  display: block;
+form input,
+form button {
   width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 2px solid #5e17eb;
-  border-radius: 4px;
-  font-size: 16px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 form button {
-  background-color: #3498db;
-  color: white;
+  background-color: #006f70; /* Azul Turquesa Mais Escuro */
+  color: #fff;
   cursor: pointer;
-  border: none;
 }
 
 form button:hover {
-  background-color: #2980b9;
+  background-color: #004c4d; /* Tons mais escuros de Azul Turquesa */
 }
 
-form input:focus, form button:focus {
-  outline: none;
-  border-color: #3498db;
+form button[type="reset"] {
+  background-color: #ff7f00; /* Tangerina */
+}
+
+form button[type="reset"]:hover {
+  background-color: #e57300;
 }
 
 /* Rodapé */
 footer {
-  background-color: #5e17eb;
-  color: white;
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 30px;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
-footer p {
-  margin: 0;
-}
-
-/* Responsividade com Media Queries */
+/* Responsividade */
 @media (max-width: 768px) {
   main {
     flex-direction: column;
     align-items: center;
-    padding: 10px;
   }
 
-  .products-container {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  section {
+    width: 100%;
   }
 
   aside {
-    border-left: none;
-    border-top: 2px solid #ccc;
-    margin-top: 20px;
     width: 100%;
-    box-sizing: border-box;
-    max-width: none;
-    left: 0;
-  }
-
-  aside form {
-    margin: 0;
-  }
-
-  form input, form button {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    padding: 10px 0;
-    font-size: 16px;
-  }
-
-  footer {
-    font-size: 12px;
-  }
-
-  form input, form button {
-    font-size: 12px;
+    margin-top: 2rem;
   }
 }

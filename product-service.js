@@ -1,4 +1,3 @@
-
 const BASE_URL = "http://localhost:3001/";
 
 const productList = async () => {
@@ -31,4 +30,3 @@ window.serviceProducts = {
     productList,
     createProduct 
 };
-
